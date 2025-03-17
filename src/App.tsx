@@ -1,34 +1,11 @@
 import './App.css';
-import Share from './components/icons/Share';
+import Sidebar from './components/Sidebar';
 
 function App() {
   return (
-    <main>
-      <div>
-        <section>
-          <header>
-            <img src='' alt='headshot' />
-            <h1>Michael Weber</h1>
-            <p>Front End Developer</p>
-            <p>
-              Bridging the creative and the technical to bring ideas to life
-            </p>
-            <div>
-              <span>
-                <Share classNames='w-18 text-green-500' />
-              </span>
-              <span>LinkedIn</span>
-              <span>GitHub</span>
-            </div>
-          </header>
-          <footer>
-            <img src='' alt='logo' />
-            <p>
-              Copyright &copy; 2025 Michael Weber <br />
-              Icons from feathericons.com
-            </p>
-          </footer>
-        </section>
+    <main className='p-4 sm:p-6 md:p-8 flex min-h-screen bg-white w-screen'>
+      <div className='border-0 md:border border-gray-300 flex flex-col md:flex-row rounded w-full'>
+        <Sidebar />
         <section>
           <div>
             <button>Projects</button>
