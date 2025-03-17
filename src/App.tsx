@@ -1,5 +1,5 @@
 import './App.css';
-import CheckSquare from './components/icons/CheckSquare';
+import GitHub from './components/icons/GitHub';
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
             </p>
             <div>
               <span>
-                <CheckSquare classNames='w-10 text-red-500' />
+                <GitHub classNames='w-14 text-red-500' />
               </span>
               <span>LinkedIn</span>
               <span>GitHub</span>

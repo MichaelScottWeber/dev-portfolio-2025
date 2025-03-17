@@ -1,8 +1,8 @@
-type BookOpenProps = {
+type CheckSquareProps = {
   classNames: string;
 };
 
-function BookOpen({ classNames }: BookOpenProps) {
+function CheckSquare({ classNames }: CheckSquareProps) {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -20,4 +20,4 @@ function BookOpen({ classNames }: BookOpenProps) {
   );
 }
 
-export default BookOpen;
+export default CheckSquare;
