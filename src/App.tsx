@@ -1,4 +1,5 @@
 import './App.css';
+import CheckSquare from './components/icons/CheckSquare';
 
 function App() {
   return (
@@ -13,7 +14,9 @@ function App() {
               Bridging the creative and the technical to bring ideas to life
             </p>
             <div>
-              <span>Email</span>
+              <span>
+                <CheckSquare classNames='w-10 text-red-500' />
+              </span>
               <span>LinkedIn</span>
               <span>GitHub</span>
             </div>
