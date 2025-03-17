@@ -1,4 +1,5 @@
 import './App.css';
+import Share from './components/icons/Share';
 
 function App() {
   return (
@@ -13,7 +14,9 @@ function App() {
               Bridging the creative and the technical to bring ideas to life
             </p>
             <div>
-              <span>Email</span>
+              <span>
+                <Share classNames='w-18 text-green-500' />
+              </span>
               <span>LinkedIn</span>
               <span>GitHub</span>
             </div>
