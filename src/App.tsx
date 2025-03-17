@@ -1,5 +1,5 @@
 import './App.css';
-import GitHub from './components/icons/GitHub';
+import Share from './components/icons/Share';
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
             </p>
             <div>
               <span>
-                <GitHub classNames='w-14 text-red-500' />
+                <Share classNames='w-18 text-green-500' />
               </span>
               <span>LinkedIn</span>
               <span>GitHub</span>
