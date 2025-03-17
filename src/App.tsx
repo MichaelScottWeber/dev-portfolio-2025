@@ -3,8 +3,8 @@ import Sidebar from './components/Sidebar';
 
 function App() {
   return (
-    <main className='p-8 flex min-h-screen'>
-      <div className='border border-gray-400 flex'>
+    <main className='p-8 flex min-h-screen bg-white w-screen'>
+      <div className='border border-gray-300 flex rounded w-full'>
         <Sidebar />
         <section>
           <div>
