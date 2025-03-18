@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import TabButton from './TabButton';
-import Projects from './Projects';
-import SkillsAndTech from './SkillsAndTech';
-import About from './About';
+import ProjectSection from './ProjectSection';
+import SkillsAndTechSection from './SkillsAndTechSection';
+import AboutSection from './AboutSection';
 import Footer from './Footer';
 import PortfolioData from '../assets/data/portfolioData.json';
 
@@ -13,11 +13,11 @@ function MainContent() {
 
   const renderContent = (view: string) => {
     if (view === 'projects') {
-      return <Projects data={PortfolioData.projects} />;
+      return <ProjectSection data={PortfolioData.projects} />;
     } else if (view === 'skills') {
-      return <SkillsAndTech />;
+      return <SkillsAndTechSection />;
     } else if (view === 'about') {
-      return <About />;
+      return <AboutSection />;
     }
   };
 

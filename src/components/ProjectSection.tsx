@@ -1,3 +1,5 @@
+import Project from './Project';
+
 type Project = {
   name: string;
   img1: string;
@@ -6,14 +8,18 @@ type Project = {
   siteUrl: string;
   sourceUrl: string;
   desc: string;
-  tech: Array<string>;
+  tech: string[];
 };
 
-type ProjectsProps = {
+type ProjectSectionProps = {
   data: Project[];
 };
 
-function Projects({ data }: ProjectsProps) {
+function ProjectSection({ data }: ProjectSectionProps) {
+  const renderProjectList = data.map((project) => {
+    return <Project key={project.name} data={project} />;
+  });
+
   return (
     <div className='py-5'>
       <h2 className='text-xl text-black font-medium'>Projects</h2>
@@ -23,8 +29,9 @@ function Projects({ data }: ProjectsProps) {
       <span className='text-xs text-gray-700'>
         *Tap on a project for more info
       </span>
+      <ul>{renderProjectList}</ul>
     </div>
   );
 }
 
-export default Projects;
+export default ProjectSection;
