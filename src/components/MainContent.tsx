@@ -3,6 +3,7 @@ import TabButton from './TabButton';
 import Projects from './Projects';
 import SkillsAndTech from './SkillsAndTech';
 import About from './About';
+import Footer from './Footer';
 
 type View = 'projects' | 'skills' | 'about';
 
@@ -20,7 +21,7 @@ function MainContent() {
   };
 
   return (
-    <section className='w-full md:p-5'>
+    <section className='w-full min-h-full md:p-5'>
       <div className='border-b border-gray-300 flex items-center justify-start'>
         <TabButton
           onClick={() => setCurrentView('projects')}
@@ -42,6 +43,9 @@ function MainContent() {
         </TabButton>
       </div>
       {renderContent(currentView)}
+      <div className='md:hidden'>
+        <Footer />
+      </div>
     </section>
   );
 }
