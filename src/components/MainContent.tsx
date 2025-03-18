@@ -13,7 +13,7 @@ function MainContent() {
 
   const renderContent = (view: string) => {
     if (view === 'projects') {
-      return <Projects />;
+      return <Projects data={PortfolioData.projects} />;
     } else if (view === 'skills') {
       return <SkillsAndTech />;
     } else if (view === 'about') {
