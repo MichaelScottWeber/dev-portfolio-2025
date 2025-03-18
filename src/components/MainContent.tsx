@@ -1,10 +1,23 @@
 import { useState } from 'react';
 import TabButton from './TabButton';
+import Projects from './Projects';
+import SkillsAndTech from './SkillsAndTech';
+import About from './About';
 
 type View = 'projects' | 'skills' | 'about';
 
 function MainContent() {
   const [currentView, setCurrentView] = useState<View>('projects');
+
+  const renderContent = (view: string) => {
+    if (view === 'projects') {
+      return <Projects />;
+    } else if (view === 'skills') {
+      return <SkillsAndTech />;
+    } else if (view === 'about') {
+      return <About />;
+    }
+  };
 
   return (
     <section>
@@ -28,11 +41,7 @@ function MainContent() {
           About
         </TabButton>
       </div>
-      <div>
-        <span>PROJECTS</span>
-        <span>SKILLS & TECH</span>
-        <span>ABOUT</span>
-      </div>
+      {renderContent(currentView)}
     </section>
   );
 }
