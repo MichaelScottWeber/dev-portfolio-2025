@@ -4,6 +4,7 @@ import Projects from './Projects';
 import SkillsAndTech from './SkillsAndTech';
 import About from './About';
 import Footer from './Footer';
+import PortfolioData from '../assets/data/portfolioData.json';
 
 type View = 'projects' | 'skills' | 'about';
 

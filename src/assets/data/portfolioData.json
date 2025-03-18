@@ -1,0 +1,44 @@
+{
+  "projects": [
+    {
+      "name": "MusicCueLibrary",
+      "img1": "../img/MusicCueLibrary1.png",
+      "img2": "../img/MusicCueLibrary2.png",
+      "color": "#725046",
+      "siteUrl": "https://www.michaelwebermusic.com/library",
+      "sourceUrl": "https://github.com/MichaelScottWeber/music-cue-library-2022",
+      "desc": "A searchable music player web app to showcase my music compositions.",
+      "tech": "React, Material UI, Firebase"
+    },
+    {
+      "name": "PizzaOrder",
+      "img1": "../img/PizzaOrder1.png",
+      "img2": "../img/PizzaOrder2.png",
+      "color": "#019889",
+      "siteUrl": "https://pizza-order.netlify.app/",
+      "sourceUrl": "https://github.com/MichaelScottWeber/pizza-order-app",
+      "desc": "An online ordering platform for a mock pizza restaurant, where users have complete control over their order.",
+      "tech": "React, SCSS, HTML5"
+    },
+    {
+      "name": "5DayForecast",
+      "img1": "../img/FiveDayForecast1.png",
+      "img2": "../img/FiveDayForecast2.png",
+      "color": "#437b98",
+      "siteUrl": "https://5-day-forecast.netlify.app/",
+      "sourceUrl": "https://github.com/MichaelScottWeber/Five-Day-Forcast",
+      "desc": "A web app, made with the Open Weather Map API, which shows a five day forecast for a provided zip code.",
+      "tech": "React, CSS3, HTML5"
+    },
+    {
+      "name": "GuitarQuiz",
+      "img1": "../img/GuitarQuiz1.png",
+      "img2": "../img/GuitarQuiz2.png",
+      "color": "#cd7328",
+      "siteUrl": "https://guitar-quiz.netlify.com/",
+      "sourceUrl": "https://github.com/MichaelScottWeber/react-quiz",
+      "desc": "An interactive online quiz that tests the user's ability to recognize famous guitar models.",
+      "tech": "React, CSS3, HTML5"
+    }
+  ]
+}
