@@ -18,7 +18,7 @@ type ProjectProps = {
 
 function Project({ data }: ProjectProps) {
   return (
-    <li className={`bg-${data.color}`}>
+    <li style={{ backgroundColor: data.color }} className=''>
       <p>{data.name}</p>
       <img src={data.img1} alt='' />
       <img src={data.img2} alt='' />
