@@ -1,5 +1,5 @@
 type MailProps = {
-  classNames: string;
+  classNames?: string;
 };
 
 function Mail({ classNames }: MailProps) {

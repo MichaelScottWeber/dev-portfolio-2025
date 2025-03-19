@@ -1,6 +1,6 @@
 import Project from './Project';
 
-type Project = {
+type ProjectData = {
   name: string;
   img1: string;
   img2: string;
@@ -12,7 +12,7 @@ type Project = {
 };
 
 type ProjectSectionProps = {
-  data: Project[];
+  data: ProjectData[];
 };
 
 function ProjectSection({ data }: ProjectSectionProps) {
@@ -23,13 +23,18 @@ function ProjectSection({ data }: ProjectSectionProps) {
   return (
     <div className='py-5'>
       <h2 className='text-xl text-black font-medium'>Projects</h2>
-      <p className='text-sm text-black mb-2'>
+      <p className='text-sm text-gray-800 mb-4 md:mb-7'>
         These are a few of the personal projects I've built over the years.
       </p>
-      <span className='text-xs text-gray-700'>
+      <span
+        aria-hidden='true'
+        className='text-xs text-gray-700 mb-4 inline-block md:hidden'
+      >
         *Tap on a project for more info
       </span>
-      <ul>{renderProjectList}</ul>
+      <ul className='flex flex-col md:flex-row md:flex-wrap gap-5 gap-2 items-center justify-center'>
+        {renderProjectList}
+      </ul>
     </div>
   );
 }

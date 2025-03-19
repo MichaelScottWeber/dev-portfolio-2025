@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { useState } from 'react';
 import GitHub from './icons/GitHub';
 import Globe from './icons/Globe';
@@ -47,29 +46,32 @@ function Project({ data }: ProjectProps) {
   };
 
   return (
-    <li className='max-w-sm'>
+    <li className='max-w-md md:max-w-sm'>
       <div
         onClick={projectClickHandler}
         style={{ backgroundColor: data.color }}
-        className='rounded'
+        className='rounded cursor-pointer'
       >
         {renderImageBlock(showMoreInfo)}
       </div>
-      <div className='flex gap-3 my-3 items-center'>
+      <div className='flex flex-col xs:flex-row gap-3 my-3 xs:items-center xs:justify-between'>
         <h3 className='text-base text-black font-semibold'>{data.name}</h3>
-        <a
-          className='py-2 px-7 bg-primary-500 rounded  border border-primary-500 text-white text-sm'
-          href={data.siteUrl}
-        >
-          <Globe />
-          Site
-        </a>
-        <a
-          className='py-2 px-7 rounded border border-primary-500 text-black text-sm'
-          href={data.sourceUrl}
-        >
-          Source
-        </a>
+        <div className='flex gap-2'>
+          <a
+            className='flex py-2 px-5 bg-primary-500 rounded  border border-primary-500 text-white text-sm hover:bg-primary-700 hover:border-primary-700 transition-all'
+            href={data.siteUrl}
+          >
+            <Globe classNames='w-4 mr-1' />
+            Site
+          </a>
+          <a
+            className='flex py-2 px-5 rounded border border-primary-500 text-black text-sm hover:bg-primary-700 hover:border-primary-700 hover:text-white transition-all'
+            href={data.sourceUrl}
+          >
+            <GitHub classNames='w-4 mr-1' />
+            Source
+          </a>
+        </div>
       </div>
     </li>
   );

@@ -1,5 +1,5 @@
 type GitHubProps = {
-  classNames: string;
+  classNames?: string;
 };
 
 function GitHub({ classNames }: GitHubProps) {

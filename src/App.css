@@ -38,4 +38,6 @@
   --color-secondary-100: #fcf7e9;
 
   --font-display: 'Inter', 'sans-serif';
+
+  --breakpoint-xs: 25rem;
 }

@@ -1,5 +1,5 @@
 type SearchProps = {
-  classNames: string;
+  classNames?: string;
 };
 
 function Search({ classNames }: SearchProps) {

@@ -1,5 +1,5 @@
 type LinkedInProps = {
-  classNames: string;
+  classNames?: string;
 };
 
 function LinkedIn({ classNames }: LinkedInProps) {
