@@ -41,146 +41,156 @@
       "tech": ["React", "CSS3", "HTML5"]
     }
   ],
-  "skills": [
-    {
-      "name": "JavaScript",
-      "tags": ["Frontend", "Backend"]
-    },
-    {
-      "name": "CSS",
-      "tags": ["Frontend"]
-    },
-    {
-      "name": "HTML",
-      "tags": ["Frontend"]
-    },
-    {
-      "name": "React",
-      "tags": ["Frontend"]
-    },
-    {
-      "name": "Angular",
-      "tags": ["Frontend"]
-    },
-    {
-      "name": "Node.js",
-      "tags": ["Backend"]
-    },
-    {
-      "name": "TypeScript",
-      "tags": ["Frontend", "Backend"]
-    },
-    {
-      "name": "SCSS",
-      "tags": ["Frontend"]
-    },
-    {
-      "name": "Bootstrap",
-      "tags": ["Frontend"]
-    },
-    {
-      "name": "Material UI",
-      "tags": ["Frontend"]
-    },
-    {
-      "name": "Tailwind",
-      "tags": ["Frontend"]
-    },
-    {
-      "name": "Jest",
-      "tags": ["Testing"]
-    },
-    {
-      "name": "React Testing Library",
-      "tags": ["Testing"]
-    },
-    {
-      "name": "AWS",
-      "tags": ["Infrastructure"]
-    },
-    {
-      "name": "Accessibility",
-      "tags": ["UX"]
-    },
-    {
-      "name": "Docker",
-      "tags": ["Infrastructure"]
-    },
-    {
-      "name": "Vite",
-      "tags": ["Frontend"]
-    },
-    {
-      "name": "Figma",
-      "tags": ["Design"]
-    },
-    {
-      "name": "Photoshop",
-      "tags": ["Design"]
-    },
-    {
-      "name": "Illustrator",
-      "tags": ["Design"]
-    },
-    {
-      "name": "XD",
-      "tags": ["Design"]
-    },
-    {
-      "name": "Adobe Creative Cloud",
-      "tags": ["Design"]
-    },
-    {
-      "name": "Git",
-      "tags": ["Version Control"]
-    },
-    {
-      "name": "Github",
-      "tags": ["Version Control"]
-    },
-    {
-      "name": "Gitlab",
-      "tags": ["Version Control"]
-    },
-    {
-      "name": "SVN",
-      "tags": ["Version Control"]
-    },
-    {
-      "name": "Jira",
-      "tags": ["Project Management"]
-    },
-    {
-      "name": "Agile",
-      "tags": ["Project Management"]
-    },
-    {
-      "name": "Framer Motion",
-      "tags": ["Frontend"]
-    },
-    {
-      "name": "Three.js",
-      "tags": ["Frontend"]
-    },
-    {
-      "name": "Netlify",
-      "tags": ["Infrastructure"]
-    },
-    {
-      "name": "Eloqua",
-      "tags": ["Project Management"]
-    },
-    {
-      "name": "Cold Fusion",
-      "tags": ["Backend"]
-    },
-    {
-      "name": "Email Development",
-      "tags": ["Frontend"]
-    },
-    {
-      "name": "SEO",
-      "tags": ["UX"]
-    }
-  ]
+  "skills": {
+    "skills": [
+      {
+        "name": "JavaScript",
+        "tags": ["Frontend", "Backend"]
+      },
+      {
+        "name": "CSS",
+        "tags": ["Frontend"]
+      },
+      {
+        "name": "HTML",
+        "tags": ["Frontend"]
+      },
+      {
+        "name": "React",
+        "tags": ["Frontend"]
+      },
+      {
+        "name": "Angular",
+        "tags": ["Frontend"]
+      },
+      {
+        "name": "Node.js",
+        "tags": ["Backend"]
+      },
+      {
+        "name": "TypeScript",
+        "tags": ["Frontend", "Backend"]
+      },
+      {
+        "name": "SCSS",
+        "tags": ["Frontend"]
+      },
+      {
+        "name": "Bootstrap",
+        "tags": ["Frontend"]
+      },
+      {
+        "name": "Material UI",
+        "tags": ["Frontend"]
+      },
+      {
+        "name": "Tailwind",
+        "tags": ["Frontend"]
+      },
+      {
+        "name": "Jest",
+        "tags": ["Testing"]
+      },
+      {
+        "name": "React Testing Library",
+        "tags": ["Testing"]
+      },
+      {
+        "name": "AWS",
+        "tags": ["Infrastructure"]
+      },
+      {
+        "name": "Accessibility",
+        "tags": ["UX"]
+      },
+      {
+        "name": "Docker",
+        "tags": ["Infrastructure"]
+      },
+      {
+        "name": "Vite",
+        "tags": ["Frontend"]
+      },
+      {
+        "name": "Figma",
+        "tags": ["Design"]
+      },
+      {
+        "name": "Photoshop",
+        "tags": ["Design"]
+      },
+      {
+        "name": "Illustrator",
+        "tags": ["Design"]
+      },
+      {
+        "name": "XD",
+        "tags": ["Design"]
+      },
+      {
+        "name": "Adobe Creative Cloud",
+        "tags": ["Design"]
+      },
+      {
+        "name": "Git",
+        "tags": ["Version Control"]
+      },
+      {
+        "name": "Github",
+        "tags": ["Version Control"]
+      },
+      {
+        "name": "Gitlab",
+        "tags": ["Version Control"]
+      },
+      {
+        "name": "SVN",
+        "tags": ["Version Control"]
+      },
+      {
+        "name": "Jira",
+        "tags": ["Project Management"]
+      },
+      {
+        "name": "Agile",
+        "tags": ["Project Management"]
+      },
+      {
+        "name": "Framer Motion",
+        "tags": ["Frontend"]
+      },
+      {
+        "name": "Three.js",
+        "tags": ["Frontend"]
+      },
+      {
+        "name": "Netlify",
+        "tags": ["Infrastructure"]
+      },
+      {
+        "name": "Eloqua",
+        "tags": ["Project Management"]
+      },
+      {
+        "name": "Cold Fusion",
+        "tags": ["Backend"]
+      },
+      {
+        "name": "Email Development",
+        "tags": ["Frontend"]
+      },
+      {
+        "name": "SEO",
+        "tags": ["UX"]
+      }
+    ],
+    "tags": [
+      "Frontend",
+      "Backend",
+      "Design",
+      "Infastructure",
+      "Version Control",
+      "Project Management"
+    ]
+  }
 }
