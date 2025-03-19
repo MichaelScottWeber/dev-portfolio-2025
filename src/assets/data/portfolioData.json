@@ -35,7 +35,7 @@
       "img1": "GuitarQuiz.png",
       "img2": "GuitarQuiz2.png",
       "color": "#cd7328",
-      "siteUrl": "https://guitar-quiz.netlify.com/",
+      "siteUrl": "https://guitar-quiz.netlify.app/",
       "sourceUrl": "https://github.com/MichaelScottWeber/react-quiz",
       "desc": "An interactive online quiz that tests the user's ability to recognize famous guitar models.",
       "tech": ["React", "CSS3", "HTML5"]
