@@ -1,4 +1,4 @@
-function SkillsAndTech() {
+function SkillsAndTechSection() {
   return (
     <div>
       <h2>Skills and Tech</h2>
@@ -6,4 +6,4 @@ function SkillsAndTech() {
   );
 }
 
-export default SkillsAndTech;
+export default SkillsAndTechSection;

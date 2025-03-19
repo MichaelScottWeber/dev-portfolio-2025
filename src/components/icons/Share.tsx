@@ -1,5 +1,5 @@
 type ShareProps = {
-  classNames: string;
+  classNames?: string;
 };
 
 function Share({ classNames }: ShareProps) {

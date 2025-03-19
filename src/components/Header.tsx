@@ -19,7 +19,7 @@ function Header() {
       <h1 className='text-xl md:text-2xl font-bold text-black'>
         Michael Weber
       </h1>
-      <p className='text-sm md:text-base mb-1 md:mb-3 text-black'>
+      <p className='text-sm md:text-base mb-1 md:mb-3 text-gray-800'>
         Front End Developer
       </p>
       <p className='text-sm md:text-base border-0 md:border-b border-gray-300 mb-4 pb-3 text-black'>

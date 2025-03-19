@@ -1,5 +1,5 @@
 type GlobeProps = {
-  classNames: string;
+  classNames?: string;
 };
 
 function Globe({ classNames }: GlobeProps) {

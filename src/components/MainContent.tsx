@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import TabButton from './TabButton';
-import Projects from './Projects';
-import SkillsAndTech from './SkillsAndTech';
-import About from './About';
+import ProjectSection from './ProjectSection';
+import SkillsAndTechSection from './SkillsAndTechSection';
+import AboutSection from './AboutSection';
 import Footer from './Footer';
+import PortfolioData from '../assets/data/portfolioData.json';
 
 type View = 'projects' | 'skills' | 'about';
 
@@ -12,16 +13,16 @@ function MainContent() {
 
   const renderContent = (view: string) => {
     if (view === 'projects') {
-      return <Projects />;
+      return <ProjectSection data={PortfolioData.projects} />;
     } else if (view === 'skills') {
-      return <SkillsAndTech />;
+      return <SkillsAndTechSection />;
     } else if (view === 'about') {
-      return <About />;
+      return <AboutSection />;
     }
   };
 
   return (
-    <section className='w-full min-h-full md:p-5'>
+    <section className='w-full md:p-5'>
       <div className='border-b border-gray-300 flex items-center justify-start'>
         <TabButton
           onClick={() => setCurrentView('projects')}

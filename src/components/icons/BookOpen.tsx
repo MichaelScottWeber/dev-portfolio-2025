@@ -1,5 +1,5 @@
 type BookOpenProps = {
-  classNames: string;
+  classNames?: string;
 };
 
 function BookOpen({ classNames }: BookOpenProps) {

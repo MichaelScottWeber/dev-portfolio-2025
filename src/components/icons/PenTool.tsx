@@ -1,5 +1,5 @@
 type PenToolProps = {
-  classNames: string;
+  classNames?: string;
 };
 
 function PenTool({ classNames }: PenToolProps) {

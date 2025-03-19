@@ -1,5 +1,5 @@
 type CheckSquareProps = {
-  classNames: string;
+  classNames?: string;
 };
 
 function CheckSquare({ classNames }: CheckSquareProps) {

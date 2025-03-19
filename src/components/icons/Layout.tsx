@@ -1,5 +1,5 @@
 type LayoutProps = {
-  classNames: string;
+  classNames?: string;
 };
 
 function Layout({ classNames }: LayoutProps) {

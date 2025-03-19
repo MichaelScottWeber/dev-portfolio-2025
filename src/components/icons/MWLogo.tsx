@@ -1,5 +1,5 @@
 type MWLogoProps = {
-  classNames: string;
+  classNames?: string;
 };
 
 function MWLogo({ classNames }: MWLogoProps) {
