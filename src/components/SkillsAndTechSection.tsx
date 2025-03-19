@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import SearchPill from './SearchPill';
 
-type SkillsList = {
+type Skill = {
   name: string;
   tags: string[];
 };
 
 type SkillsData = {
-  skills: SkillsList[];
+  skills: Skill[];
   tags: string[];
 };
 
@@ -34,12 +34,25 @@ function SkillsAndTechSection({ data }: SkillsAndTechSectionProps) {
     );
   });
 
+  const filterSkills = (list: Skill[]) => {
+    if (!selectedTag) {
+      return list;
+    } else {
+      return list.filter((skill) => skill.tags.includes(selectedTag));
+    }
+  };
+
+  const renderSkillsList = filterSkills(data.skills).map((skill) => {
+    return <li key={skill.name}>{skill.name}</li>;
+  });
+
   return (
     <div className='py-5'>
       <h2 className='text-xl text-black font-medium mb-4 md:mb-7'>
         Skills and Tech
       </h2>
-      <ul className='flex flex-wrap gap-2'>{renderSearchTermList}</ul>
+      <ul className='flex flex-wrap gap-2 mb-4'>{renderSearchTermList}</ul>
+      <ul className='flex flex-wrap gap-2'>{renderSkillsList}</ul>
     </div>
   );
 }
