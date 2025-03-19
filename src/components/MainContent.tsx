@@ -22,7 +22,7 @@ function MainContent() {
   };
 
   return (
-    <section className='w-full min-h-full md:p-5'>
+    <section className='w-full md:p-5'>
       <div className='border-b border-gray-300 flex items-center justify-start'>
         <TabButton
           onClick={() => setCurrentView('projects')}
