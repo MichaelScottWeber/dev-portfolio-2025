@@ -32,7 +32,7 @@ function Project({ data }: ProjectProps) {
           </p>
           <p className='text-white font-light absolute bottom-3 right-3 text-sm w-4/7'>
             Made with <br />
-            {data.tech.toString()}
+            {data.tech.join(', ')}
           </p>
         </div>
       );
