@@ -27,7 +27,7 @@ function ProjectSection({ data }: ProjectSectionProps) {
       </h2>
       <span
         aria-hidden='true'
-        className='text-xs text-gray-700 dark:text-white/70 mb-4 inline-block md:hidden'
+        className='text-xs text-gray-700 dark:text-gray-200/80 mb-4 inline-block md:hidden'
       >
         *Tap on a project for more info
       </span>
