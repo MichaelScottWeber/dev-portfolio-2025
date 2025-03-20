@@ -15,7 +15,7 @@ function MainContent() {
     if (view === 'projects') {
       return <ProjectSection data={PortfolioData.projects} />;
     } else if (view === 'skills') {
-      return <SkillsAndTechSection />;
+      return <SkillsAndTechSection data={PortfolioData.skills} />;
     } else if (view === 'about') {
       return <AboutSection />;
     }

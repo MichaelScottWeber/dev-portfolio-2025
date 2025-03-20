@@ -58,6 +58,8 @@ function Project({ data }: ProjectProps) {
         <h3 className='text-base text-black font-semibold'>{data.name}</h3>
         <div className='flex gap-2'>
           <a
+            target='_blank'
+            rel='noopener noreferrer'
             className='flex py-2 px-5 bg-primary-500 rounded  border border-primary-500 text-white text-sm hover:bg-primary-700 hover:border-primary-700 transition-all'
             href={data.siteUrl}
           >
@@ -65,6 +67,8 @@ function Project({ data }: ProjectProps) {
             Site
           </a>
           <a
+            target='_blank'
+            rel='noopener noreferrer'
             className='flex py-2 px-5 rounded border border-primary-500 text-black text-sm hover:bg-primary-700 hover:border-primary-700 hover:text-white transition-all'
             href={data.sourceUrl}
           >

@@ -35,10 +35,49 @@
       "img1": "GuitarQuiz.png",
       "img2": "GuitarQuiz2.png",
       "color": "#cd7328",
-      "siteUrl": "https://guitar-quiz.netlify.com/",
+      "siteUrl": "https://guitar-quiz.netlify.app/",
       "sourceUrl": "https://github.com/MichaelScottWeber/react-quiz",
       "desc": "An interactive online quiz that tests the user's ability to recognize famous guitar models.",
       "tech": ["React", "CSS3", "HTML5"]
     }
-  ]
+  ],
+  "skills": {
+    "skills": [
+      { "name": "JavaScript", "tags": ["Frontend"] },
+      { "name": "CSS", "tags": ["Frontend"] },
+      { "name": "HTML", "tags": ["Frontend"] },
+      { "name": "React", "tags": ["Frontend"] },
+      { "name": "Angular", "tags": ["Frontend"] },
+      { "name": "Node.js", "tags": ["Backend"] },
+      { "name": "TypeScript", "tags": ["Frontend", "Backend"] },
+      { "name": "SCSS", "tags": ["Frontend"] },
+      { "name": "Bootstrap", "tags": ["Frontend", "UI"] },
+      { "name": "Material UI", "tags": ["Frontend", "UI"] },
+      { "name": "Tailwind", "tags": ["Frontend", "UI"] },
+      { "name": "Jest", "tags": ["Testing"] },
+      { "name": "React Testing Library", "tags": ["Testing"] },
+      { "name": "AWS", "tags": ["Cloud"] },
+      { "name": "Accessibility", "tags": ["Frontend"] },
+      { "name": "Docker", "tags": ["Cloud"] },
+      { "name": "Vite", "tags": ["Frontend"] },
+      { "name": "Figma", "tags": ["Design"] },
+      { "name": "Photoshop", "tags": ["Design"] },
+      { "name": "Illustrator", "tags": ["Design"] },
+      { "name": "XD", "tags": ["Design"] },
+      { "name": "Adobe Creative Cloud", "tags": ["Design"] },
+      { "name": "Git", "tags": ["Version Control"] },
+      { "name": "Github", "tags": ["Version Control"] },
+      { "name": "Gitlab", "tags": ["Version Control"] },
+      { "name": "SVN", "tags": ["Version Control"] },
+      { "name": "Jira", "tags": ["Project Management"] },
+      { "name": "Agile", "tags": ["Project Management"] },
+      { "name": "Framer Motion", "tags": ["Frontend", "UI"] },
+      { "name": "Three.js", "tags": ["Frontend", "UI"] },
+      { "name": "Netlify", "tags": ["Cloud"] },
+      { "name": "Cold Fusion", "tags": ["Backend"] },
+      { "name": "Email Development", "tags": ["Frontend"] },
+      { "name": "SEO", "tags": ["Frontend"] }
+    ],
+    "tags": ["Frontend", "Backend", "UI", "Testing", "Cloud", "Design"]
+  }
 }

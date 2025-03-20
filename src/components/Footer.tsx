@@ -8,7 +8,6 @@ function Footer() {
       <MWLogo classNames='w-11 text-black mb-2' />
       <p className='text-[10px] text-gray-700 text-center'>
         Copyright &copy; {thisYear} Michael Weber <br />
-        Icons from feathericons.com
       </p>
     </footer>
   );
