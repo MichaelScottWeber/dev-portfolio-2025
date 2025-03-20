@@ -22,7 +22,7 @@ function MainContent() {
   };
 
   return (
-    <section className='w-full md:p-5'>
+    <section className='w-full h-full md:p-5'>
       <div className='border-b border-gray-300 flex items-center justify-start'>
         <TabButton
           onClick={() => setCurrentView('projects')}
@@ -43,9 +43,11 @@ function MainContent() {
           About
         </TabButton>
       </div>
-      {renderContent(currentView)}
-      <div className='md:hidden'>
-        <Footer />
+      <div className='flex flex-col justify-between h-7/8'>
+        {renderContent(currentView)}
+        <div className='md:hidden'>
+          <Footer />
+        </div>
       </div>
     </section>
   );
