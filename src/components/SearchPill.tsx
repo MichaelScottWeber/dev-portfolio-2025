@@ -1,4 +1,5 @@
 import Search from './icons/Search';
+import X from './icons/X';
 
 type SearchPillProps = {
   name: string;
@@ -14,6 +15,7 @@ function SearchPill({ name, selected, onClick }: SearchPillProps) {
       onClick(name);
     }
   };
+
   return (
     <button
       className={`border flex rounded-full py-1 px-3 text-xs text-black dark:text-gray-200 transition-all cursor-pointer hover:border-primary-500 hover:text-primary-500 ${
@@ -23,7 +25,11 @@ function SearchPill({ name, selected, onClick }: SearchPillProps) {
       }`}
       onClick={handleOnClick}
     >
-      <Search classNames='w-3 mr-1' />
+      {selected ? (
+        <X classNames='w-3 mr-1' />
+      ) : (
+        <Search classNames='w-3 mr-1' />
+      )}
       {name}
     </button>
   );
