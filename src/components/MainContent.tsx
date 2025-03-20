@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from 'react';
 import TabButton from './TabButton';
 import ProjectSection from './ProjectSection';
@@ -5,6 +7,8 @@ import SkillsAndTechSection from './SkillsAndTechSection';
 import AboutSection from './AboutSection';
 import Footer from './Footer';
 import PortfolioData from '../assets/data/portfolioData.json';
+import { AnimatePresence } from 'motion/react';
+import * as motion from 'motion/react-client';
 
 type View = 'projects' | 'skills' | 'about';
 
@@ -13,11 +17,47 @@ function MainContent() {
 
   const renderContent = (view: string) => {
     if (view === 'projects') {
-      return <ProjectSection data={PortfolioData.projects} />;
+      return (
+        <AnimatePresence mode='wait'>
+          <motion.div
+            key={currentView}
+            initial={{ y: 0, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: 0, opacity: 0 }}
+            transition={{ duration: 0.15 }}
+          >
+            <ProjectSection data={PortfolioData.projects} />
+          </motion.div>
+        </AnimatePresence>
+      );
     } else if (view === 'skills') {
-      return <SkillsAndTechSection data={PortfolioData.skills} />;
+      return (
+        <AnimatePresence mode='wait'>
+          <motion.div
+            key={currentView}
+            initial={{ y: 0, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: 0, opacity: 0 }}
+            transition={{ duration: 0.15 }}
+          >
+            <SkillsAndTechSection data={PortfolioData.skills} />
+          </motion.div>
+        </AnimatePresence>
+      );
     } else if (view === 'about') {
-      return <AboutSection />;
+      return (
+        <AnimatePresence mode='wait'>
+          <motion.div
+            key={currentView}
+            initial={{ y: 0, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: 0, opacity: 0 }}
+            transition={{ duration: 0.15 }}
+          >
+            <AboutSection />
+          </motion.div>
+        </AnimatePresence>
+      );
     }
   };
 
