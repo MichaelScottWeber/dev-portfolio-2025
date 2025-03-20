@@ -22,13 +22,12 @@ function ProjectSection({ data }: ProjectSectionProps) {
 
   return (
     <div className='py-5'>
-      <h2 className='text-xl text-black font-medium mb-4 md:mb-7'>Projects</h2>
-      {/* <p className='text-sm text-gray-800 mb-4 md:mb-7'>
-        These are a few of the personal projects I've built over the years.
-      </p> */}
+      <h2 className='text-xl text-black dark:text-white font-medium mb-4 md:mb-7'>
+        Projects
+      </h2>
       <span
         aria-hidden='true'
-        className='text-xs text-gray-700 mb-4 inline-block md:hidden'
+        className='text-xs text-gray-700 dark:text-white/70 mb-4 inline-block md:hidden'
       >
         *Tap on a project for more info
       </span>

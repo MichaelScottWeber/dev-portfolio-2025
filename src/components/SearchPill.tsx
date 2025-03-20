@@ -16,9 +16,9 @@ function SearchPill({ name, selected, onClick }: SearchPillProps) {
   };
   return (
     <button
-      className={`border flex rounded-full py-1 px-3 text-xs text-black trabsition-all cursor-pointer hover:border-primary-500 hover:text-primary-500 ${
+      className={`border flex rounded-full py-1 px-3 text-xs text-black dark:text-white transition-all cursor-pointer hover:border-primary-500 hover:text-primary-500 ${
         selected
-          ? 'bg-gray-200 border-secondary-500 text-primary-800'
+          ? 'bg-gray-200 dark:bg-gray-800 border-secondary-500 text-primary-800'
           : 'border-gray-300'
       }`}
       onClick={handleOnClick}

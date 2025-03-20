@@ -58,52 +58,52 @@ function SkillsAndTechSection({ data }: SkillsAndTechSectionProps) {
 
   return (
     <div className='py-5'>
-      <h2 className='text-xl text-black font-medium mb-4 md:mb-7'>
+      <h2 className='text-xl text-black dark:text-white font-medium mb-4 md:mb-7'>
         Skills and Tech
       </h2>
       <ul className='flex flex-wrap gap-2 mb-6'>{renderSearchTermList}</ul>
       <ul className='flex flex-wrap gap-4 mb-9'>{renderSkillsList}</ul>
       <div className='mb-6'>
-        <h3 className='text-black text-lg font-medium flex mb-2'>
+        <h3 className='text-black dark:text-white text-lg font-medium flex mb-2'>
           <CheckSquare classNames='w-6 mr-2' /> Accessibility
         </h3>
-        <p className='text-black text-base'>
+        <p className='text-black dark:text-white text-base'>
           Experienced in semantic HTML structure, screen readers, and in writing
           code that is WCAG 2.1 compliant.
         </p>
       </div>
       <div className='mb-6'>
-        <h3 className='text-black text-lg font-medium flex mb-2'>
+        <h3 className='text-black dark:text-white text-lg font-medium flex mb-2'>
           <Layout classNames='w-6 mr-2' /> Responsive Design
         </h3>
-        <p className='text-black text-base'>
+        <p className='text-black dark:text-white text-base'>
           Projects that look good on all devices and all browsers. If it doesn't
           work on mobile, then it doesn't work.
         </p>
       </div>
       <div className='mb-6'>
-        <h3 className='text-black text-lg font-medium flex mb-2'>
+        <h3 className='text-black dark:text-white text-lg font-medium flex mb-2'>
           <PenTool classNames='w-6 mr-2' /> Image Design
         </h3>
-        <p className='text-black text-base'>
+        <p className='text-black dark:text-white text-base'>
           A keen eye for design, and skilled with Adobe Photoshop, Illustrator,
           and Figma.
         </p>
       </div>
       <div className='mb-6'>
-        <h3 className='text-black text-lg font-medium flex mb-2'>
+        <h3 className='text-black dark:text-white text-lg font-medium flex mb-2'>
           <Share classNames='w-6 mr-2' /> Collaboration
         </h3>
-        <p className='text-black text-base'>
+        <p className='text-black dark:text-white text-base'>
           Experienced working onsite and remotely in cross-disceplanary teams.
           Excellent communication skills.
         </p>
       </div>
       <div className='mb-6'>
-        <h3 className='text-black text-lg font-medium flex mb-2'>
+        <h3 className='text-black dark:text-white text-lg font-medium flex mb-2'>
           <BookOpen classNames='w-6 mr-2' /> Self-Motivation
         </h3>
-        <p className='text-black text-base'>
+        <p className='text-black dark:text-white text-base'>
           A self-taught developer who isn't afraid of a challenge and loves to
           attack problems head on. Always learning new things.
         </p>

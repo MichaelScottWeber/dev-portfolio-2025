@@ -55,12 +55,14 @@ function Project({ data }: ProjectProps) {
         {renderImageBlock(showMoreInfo)}
       </div>
       <div className='flex flex-col xs:flex-row gap-3 my-3 xs:items-center xs:justify-between'>
-        <h3 className='text-base text-black font-semibold'>{data.name}</h3>
+        <h3 className='text-base text-black dark:text-white font-semibold'>
+          {data.name}
+        </h3>
         <div className='flex gap-2'>
           <a
             target='_blank'
             rel='noopener noreferrer'
-            className='flex py-2 px-5 bg-primary-500 rounded  border border-primary-500 text-white text-sm hover:bg-primary-700 hover:border-primary-700 transition-all'
+            className='flex py-2 px-5 bg-primary-500 rounded border border-primary-500 text-white text-sm hover:bg-primary-700 hover:border-primary-700 transition-all'
             href={data.siteUrl}
           >
             <Globe classNames='w-4 mr-1' />
@@ -69,7 +71,7 @@ function Project({ data }: ProjectProps) {
           <a
             target='_blank'
             rel='noopener noreferrer'
-            className='flex py-2 px-5 rounded border border-primary-500 text-black text-sm hover:bg-primary-700 hover:border-primary-700 hover:text-white transition-all'
+            className='flex py-2 px-5 rounded border border-primary-500 text-black dark:text-white text-sm hover:bg-primary-700 hover:border-primary-700 hover:text-white transition-all'
             href={data.sourceUrl}
           >
             <GitHub classNames='w-4 mr-1' />
