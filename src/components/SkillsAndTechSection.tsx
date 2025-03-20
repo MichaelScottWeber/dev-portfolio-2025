@@ -61,8 +61,8 @@ function SkillsAndTechSection({ data }: SkillsAndTechSectionProps) {
       <h2 className='text-xl text-black font-medium mb-4 md:mb-7'>
         Skills and Tech
       </h2>
-      <ul className='flex flex-wrap gap-2 mb-5'>{renderSearchTermList}</ul>
-      <ul className='flex flex-wrap gap-3 mb-8'>{renderSkillsList}</ul>
+      <ul className='flex flex-wrap gap-2 mb-6'>{renderSearchTermList}</ul>
+      <ul className='flex flex-wrap gap-4 mb-9'>{renderSkillsList}</ul>
       <div className='mb-6'>
         <h3 className='text-black text-lg font-medium flex mb-2'>
           <CheckSquare classNames='w-6 mr-2' /> Accessibility
