@@ -29,7 +29,7 @@ function Project({ data }: ProjectProps) {
   const renderImageBlock = (moreInfo: boolean) => {
     if (moreInfo) {
       return (
-        <AnimatePresence mode='wait' initial={false}>
+        <AnimatePresence mode='wait'>
           <motion.div
             key={showMoreInfo ? 1 : 0}
             initial={{ x: 400, opacity: 1 }}
@@ -52,7 +52,7 @@ function Project({ data }: ProjectProps) {
       );
     } else {
       return (
-        <AnimatePresence mode='wait' initial={false}>
+        <AnimatePresence mode='wait'>
           <motion.div
             key={showMoreInfo ? 1 : 0}
             initial={{ x: -400, opacity: 1 }}
