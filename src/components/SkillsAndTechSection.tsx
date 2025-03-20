@@ -6,6 +6,7 @@ import Layout from './icons/Layout';
 import PenTool from './icons/PenTool';
 import Share from './icons/Share';
 import BookOpen from './icons/BookOpen';
+import { AnimatePresence, motion } from 'motion/react';
 
 type Skill = {
   name: string;
@@ -50,9 +51,15 @@ function SkillsAndTechSection({ data }: SkillsAndTechSectionProps) {
 
   const renderSkillsList = filterSkills(data.skills).map((skill) => {
     return (
-      <li key={skill.name}>
+      <motion.li
+        key={skill.name}
+        initial={{ opacity: 0, scale: 1 }}
+        animate={{ opacity: 1, scale: 1 }}
+        exit={{ opacity: 0, scale: 1 }}
+        transition={{ duration: 0.3 }}
+      >
         <SkillPill skill={skill.name} />
-      </li>
+      </motion.li>
     );
   });
 
@@ -62,7 +69,11 @@ function SkillsAndTechSection({ data }: SkillsAndTechSectionProps) {
         Skills and Tech
       </h2>
       <ul className='flex flex-wrap gap-2 mb-6'>{renderSearchTermList}</ul>
-      <ul className='flex flex-wrap gap-4 mb-9'>{renderSkillsList}</ul>
+      <ul className='flex flex-wrap gap-4 mb-9'>
+        <AnimatePresence initial={false} mode='wait'>
+          {renderSkillsList}
+        </AnimatePresence>
+      </ul>
       <div className='mb-6'>
         <h3 className='text-black dark:text-gray-200 text-lg font-medium flex mb-2'>
           <CheckSquare classNames='w-6 mr-2' /> Accessibility

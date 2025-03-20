@@ -1,6 +1,10 @@
+'use client';
+
 import { useState } from 'react';
 import GitHub from './icons/GitHub';
 import Globe from './icons/Globe';
+import { AnimatePresence } from 'motion/react';
+import * as motion from 'motion/react-client';
 
 type Project = {
   name: string;
@@ -25,22 +29,42 @@ function Project({ data }: ProjectProps) {
   const renderImageBlock = (moreInfo: boolean) => {
     if (moreInfo) {
       return (
-        <div className='relative'>
-          <img src={data.img2} alt='' />
-          <p className='text-white font-light absolute top-3 right-3 text-base w-4/7'>
-            {data.desc}
-          </p>
-          <p className='text-white font-light absolute bottom-3 right-3 text-sm w-4/7'>
-            Made with <br />
-            {data.tech.join(', ')}
-          </p>
-        </div>
+        <AnimatePresence mode='wait' initial={false}>
+          <motion.div
+            key={showMoreInfo ? 1 : 0}
+            initial={{ x: 400, opacity: 1 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: 400, opacity: 1 }}
+            transition={{ duration: 0.2 }}
+          >
+            <div className='relative'>
+              <img src={data.img2} alt='' />
+              <p className='text-white font-light absolute top-3 right-3 text-base w-4/7'>
+                {data.desc}
+              </p>
+              <p className='text-white font-light absolute bottom-3 right-3 text-sm w-4/7'>
+                Made with <br />
+                {data.tech.join(', ')}
+              </p>
+            </div>
+          </motion.div>
+        </AnimatePresence>
       );
     } else {
       return (
-        <div>
-          <img src={data.img1} alt='' />
-        </div>
+        <AnimatePresence mode='wait' initial={false}>
+          <motion.div
+            key={showMoreInfo ? 1 : 0}
+            initial={{ x: -400, opacity: 1 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: -400, opacity: 1 }}
+            transition={{ duration: 0.2 }}
+          >
+            <div>
+              <img src={data.img1} alt='' />
+            </div>
+          </motion.div>
+        </AnimatePresence>
       );
     }
   };
@@ -50,7 +74,7 @@ function Project({ data }: ProjectProps) {
       <div
         onClick={projectClickHandler}
         style={{ backgroundColor: data.color }}
-        className='rounded cursor-pointer'
+        className='rounded cursor-pointer overflow-hidden'
       >
         {renderImageBlock(showMoreInfo)}
       </div>
