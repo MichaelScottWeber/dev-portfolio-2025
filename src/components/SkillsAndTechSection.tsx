@@ -56,7 +56,7 @@ function SkillsAndTechSection({ data }: SkillsAndTechSectionProps) {
         initial={{ opacity: 0, scale: 1 }}
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 1 }}
-        transition={{ duration: 0.3 }}
+        transition={{ duration: 0.4 }}
       >
         <SkillPill skill={skill.name} />
       </motion.li>
@@ -69,7 +69,7 @@ function SkillsAndTechSection({ data }: SkillsAndTechSectionProps) {
         Skills and Tech
       </h2>
       <ul className='flex flex-wrap gap-2 mb-6'>{renderSearchTermList}</ul>
-      <AnimatePresence initial={false} mode='wait'>
+      <AnimatePresence mode='wait'>
         <ul className='flex flex-wrap gap-4 mb-9'>{renderSkillsList}</ul>
       </AnimatePresence>
       <div className='mb-6'>
