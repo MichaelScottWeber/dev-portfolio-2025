@@ -38,6 +38,8 @@ function Project({ data }: ProjectProps) {
       setXValue(e.matches ? -320 : -384);
     };
 
+    changeHandler(mediaQuery as unknown as MediaQueryListEvent);
+
     mediaQuery.addEventListener('change', changeHandler);
   }, []);
 
