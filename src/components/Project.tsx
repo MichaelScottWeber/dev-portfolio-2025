@@ -1,6 +1,9 @@
-import { useState } from 'react';
+'use client';
+
+import { useState, useEffect } from 'react';
 import GitHub from './icons/GitHub';
 import Globe from './icons/Globe';
+import * as motion from 'motion/react-client';
 
 type Project = {
   name: string;
@@ -19,40 +22,60 @@ type ProjectProps = {
 
 function Project({ data }: ProjectProps) {
   const [showMoreInfo, setShowMoreInfo] = useState(false);
+  const [xValue, setXValue] = useState(-320);
 
   const projectClickHandler = () => setShowMoreInfo(!showMoreInfo);
 
-  const renderImageBlock = (moreInfo: boolean) => {
-    if (moreInfo) {
-      return (
-        <div className='relative'>
-          <img src={data.img2} alt='' />
-          <p className='text-white font-light absolute top-3 right-3 text-base w-4/7'>
-            {data.desc}
-          </p>
-          <p className='text-white font-light absolute bottom-3 right-3 text-sm w-4/7'>
-            Made with <br />
-            {data.tech.join(', ')}
-          </p>
-        </div>
-      );
-    } else {
-      return (
-        <div>
-          <img src={data.img1} alt='' />
-        </div>
-      );
-    }
+  const motionVariants = {
+    image: { x: 0 },
+    info: { x: xValue },
   };
 
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(max-width: 25rem)');
+
+    const changeHandler = (e: MediaQueryListEvent) => {
+      setXValue(e.matches ? -320 : -384);
+    };
+
+    mediaQuery.addEventListener('change', changeHandler);
+  }, []);
+
   return (
-    <li className='max-w-md md:max-w-sm'>
+    <li className='w-80 xs:w-96 relative'>
       <div
         onClick={projectClickHandler}
         style={{ backgroundColor: data.color }}
-        className='rounded cursor-pointer'
+        className='rounded cursor-pointer overflow-hidden max-w-full'
       >
-        {renderImageBlock(showMoreInfo)}
+        <motion.div
+          animate={showMoreInfo ? 'info' : 'image'}
+          transition={{ type: 'spring', duration: 1, bounce: 0.15 }}
+          variants={motionVariants}
+          className='flex w-[640px] xs:w-[768px]'
+        >
+          <div className='w-80 xs:w-96'>
+            <img
+              className='max-w-full'
+              src={data.img1}
+              alt={`screenshots of ${data.name}`}
+            />
+          </div>
+          <div className='relative w-80 xs:w-96'>
+            <img
+              className='max-w-full'
+              src={data.img2}
+              alt={`screenshots of ${data.name}`}
+            />
+            <p className='text-white font-light absolute top-3 right-3 text-base w-4/7'>
+              {data.desc}
+            </p>
+            <p className='text-white font-light absolute bottom-3 right-3 text-sm w-4/7'>
+              Made with <br />
+              {data.tech.join(', ')}
+            </p>
+          </div>
+        </motion.div>
       </div>
       <div className='flex flex-col xs:flex-row gap-3 my-3 xs:items-center xs:justify-between'>
         <h3 className='text-base text-black dark:text-gray-200 font-semibold'>

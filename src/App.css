@@ -41,3 +41,7 @@
 
   --breakpoint-xs: 25rem;
 }
+
+body {
+  @apply dark:bg-black;
+}
