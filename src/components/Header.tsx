@@ -1,4 +1,4 @@
-import ProfilePic from '../assets/img/profilepic-400.png';
+// import ProfilePic from '../assets/img/profilepic-400.png';
 import ContactLinks from './ContactLinks';
 
 function Header() {
@@ -8,7 +8,7 @@ function Header() {
         <div className='rounded-full border-2 border-primary-500 inline-block p-1 mb-3'>
           <img
             className='rounded-full w-19 md:w-24'
-            src={ProfilePic}
+            src='https://dev-portfolio-2025.s3.us-east-2.amazonaws.com/img/profilepic-400.png'
             alt='headshot'
           />
         </div>
