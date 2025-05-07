@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import TabButton from './TabButton';
 import ProjectSection from './ProjectSection';
 import SkillsAndTechSection from './SkillsAndTechSection';
@@ -9,11 +9,45 @@ import Footer from './Footer';
 import PortfolioData from '../assets/data/portfolioData.json';
 import { AnimatePresence } from 'motion/react';
 import * as motion from 'motion/react-client';
+import { db } from '../firebase';
+import { collection, getDocs, doc, getDoc } from 'firebase/firestore';
 
 type View = 'projects' | 'skills' | 'about';
 
 function MainContent() {
   const [currentView, setCurrentView] = useState<View>('projects');
+
+  const [projects, setProjects] = useState([]);
+  const [skills, setSkills] = useState({ skills: [], tags: [] });
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        // Fetch Projects
+        const projectsCollection = collection(db, 'projects');
+        const projectSnapshot = await getDocs(projectsCollection);
+        const projectsList = projectSnapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        setProjects(projectsList);
+
+        // Fetch Skills
+        const skillsDoc = await getDoc(doc(db, 'skills', 'skillsList'));
+        if (skillsDoc.exists()) {
+          setSkills(skillsDoc.data());
+        }
+
+        setLoading(false);
+      } catch (err) {
+        console.error('Error fetching data', err);
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   const renderContent = (view: string) => {
     if (view === 'projects') {
