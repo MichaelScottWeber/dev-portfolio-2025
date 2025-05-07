@@ -2,8 +2,8 @@
   "projects": [
     {
       "name": "MusicCueLibrary",
-      "img1": "MusicCueLibrary.png",
-      "img2": "MusicCueLibrary2.png",
+      "img1": "https://dev-portfolio-2025.s3.us-east-2.amazonaws.com/img/MusicCueLibrary.png",
+      "img2": "https://dev-portfolio-2025.s3.us-east-2.amazonaws.com/img/MusicCueLibrary2.png",
       "color": "#725046",
       "siteUrl": "https://www.michaelwebermusic.com/library",
       "sourceUrl": "https://github.com/MichaelScottWeber/music-cue-library-2022",
@@ -12,8 +12,8 @@
     },
     {
       "name": "PizzaOrder",
-      "img1": "PizzaOrder.png",
-      "img2": "PizzaOrder2.png",
+      "img1": "https://dev-portfolio-2025.s3.us-east-2.amazonaws.com/img/PizzaOrder.png",
+      "img2": "https://dev-portfolio-2025.s3.us-east-2.amazonaws.com/img/PizzaOrder2.png",
       "color": "#019889",
       "siteUrl": "https://pizza-order.netlify.app/",
       "sourceUrl": "https://github.com/MichaelScottWeber/pizza-order-app",
@@ -22,8 +22,8 @@
     },
     {
       "name": "5DayForecast",
-      "img1": "5DayForecast.png",
-      "img2": "5DayForecast2.png",
+      "img1": "https://dev-portfolio-2025.s3.us-east-2.amazonaws.com/img/5DayForecast.png",
+      "img2": "https://dev-portfolio-2025.s3.us-east-2.amazonaws.com/img/5DayForecast2.png",
       "color": "#437b98",
       "siteUrl": "https://5-day-forecast.netlify.app/",
       "sourceUrl": "https://github.com/MichaelScottWeber/Five-Day-Forcast",
@@ -32,8 +32,8 @@
     },
     {
       "name": "GuitarQuiz",
-      "img1": "GuitarQuiz.png",
-      "img2": "GuitarQuiz2.png",
+      "img1": "https://dev-portfolio-2025.s3.us-east-2.amazonaws.com/img/GuitarQuiz.png",
+      "img2": "https://dev-portfolio-2025.s3.us-east-2.amazonaws.com/img/GuitarQuiz2.png",
       "color": "#cd7328",
       "siteUrl": "https://guitar-quiz.netlify.app/",
       "sourceUrl": "https://github.com/MichaelScottWeber/react-quiz",
