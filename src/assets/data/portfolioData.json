@@ -78,6 +78,14 @@
       { "name": "Email Development", "tags": ["Frontend"] },
       { "name": "SEO", "tags": ["Frontend"] }
     ],
-    "tags": ["Frontend", "Backend", "UI", "Testing", "Cloud", "Design"]
+    "tags": [
+      "Frontend",
+      "Backend",
+      "UI",
+      "Testing",
+      "Cloud",
+      "Design",
+      "Project Management"
+    ]
   }
 }
