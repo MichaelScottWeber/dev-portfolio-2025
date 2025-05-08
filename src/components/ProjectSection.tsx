@@ -1,20 +1,18 @@
 import Project from './Project';
+import Loading from './Loading';
+import Error from './Error';
 import { useProjects } from '../hooks/useFirebase';
 
 function ProjectSection() {
   const { projects, loading, error } = useProjects();
 
-  if (loading) {
-    return <div>loading...</div>;
-  }
-
-  if (error) {
-    return <div>error: {error}</div>;
-  }
-
   const renderProjectList = projects?.map((project) => {
     return <Project key={project.name} data={project} />;
   });
+
+  if (loading) return <Loading />;
+
+  if (error) return <Error error={error} />;
 
   return (
     <div className='py-5'>

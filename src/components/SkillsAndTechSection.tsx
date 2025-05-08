@@ -6,6 +6,8 @@ import Layout from './icons/Layout';
 import PenTool from './icons/PenTool';
 import Share from './icons/Share';
 import BookOpen from './icons/BookOpen';
+import Loading from './Loading';
+import Error from './Error';
 import { AnimatePresence, motion } from 'motion/react';
 import { SkillType } from '../types/portfolio';
 import { useSkills } from '../hooks/useFirebase';
@@ -13,14 +15,6 @@ import { useSkills } from '../hooks/useFirebase';
 function SkillsAndTechSection() {
   const [selectedTag, setSelectedTag] = useState('');
   const { skills, loading, error } = useSkills();
-
-  if (loading) {
-    return <div>loading...</div>;
-  }
-
-  if (error) {
-    return <div>error: {error}</div>;
-  }
 
   const handleSearchPillClick = (tag: string) => {
     setSelectedTag(tag);
@@ -59,6 +53,10 @@ function SkillsAndTechSection() {
       </motion.li>
     );
   });
+
+  if (loading) return <Loading />;
+
+  if (error) return <Error error={error} />;
 
   return (
     <div className='py-5'>
