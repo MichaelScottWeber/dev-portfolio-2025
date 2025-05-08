@@ -1,4 +1,3 @@
-// import ProfilePic from '../assets/img/profilepic-400.png';
 import ContactLinks from './ContactLinks';
 
 function Header() {

@@ -4,20 +4,10 @@ import { useState, useEffect } from 'react';
 import GitHub from './icons/GitHub';
 import Globe from './icons/Globe';
 import * as motion from 'motion/react-client';
-
-type Project = {
-  name: string;
-  img1: string;
-  img2: string;
-  color: string;
-  siteUrl: string;
-  sourceUrl: string;
-  desc: string;
-  tech: string[];
-};
+import { ProjectType } from '../types/portfolio';
 
 type ProjectProps = {
-  data: Project;
+  data: ProjectType;
 };
 
 function Project({ data }: ProjectProps) {

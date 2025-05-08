@@ -6,30 +6,21 @@ import Layout from './icons/Layout';
 import PenTool from './icons/PenTool';
 import Share from './icons/Share';
 import BookOpen from './icons/BookOpen';
+import Loading from './Loading';
+import Error from './Error';
 import { AnimatePresence, motion } from 'motion/react';
+import { SkillType } from '../types/portfolio';
+import { useSkills } from '../hooks/useFirebase';
 
-type Skill = {
-  name: string;
-  tags: string[];
-};
-
-type SkillsData = {
-  skills: Skill[];
-  tags: string[];
-};
-
-type SkillsAndTechSectionProps = {
-  data: SkillsData;
-};
-
-function SkillsAndTechSection({ data }: SkillsAndTechSectionProps) {
+function SkillsAndTechSection() {
   const [selectedTag, setSelectedTag] = useState('');
+  const { skills, loading, error } = useSkills();
 
   const handleSearchPillClick = (tag: string) => {
     setSelectedTag(tag);
   };
 
-  const renderSearchTermList = data.tags.map((tag) => {
+  const renderSearchTermList = skills?.tags.map((tag) => {
     return (
       <li key={tag}>
         <SearchPill
@@ -41,7 +32,7 @@ function SkillsAndTechSection({ data }: SkillsAndTechSectionProps) {
     );
   });
 
-  const filterSkills = (list: Skill[]) => {
+  const filterSkills = (list: SkillType[]) => {
     if (!selectedTag) {
       return list;
     } else {
@@ -49,7 +40,7 @@ function SkillsAndTechSection({ data }: SkillsAndTechSectionProps) {
     }
   };
 
-  const renderSkillsList = filterSkills(data.skills).map((skill) => {
+  const renderSkillsList = filterSkills(skills.skills).map((skill) => {
     return (
       <motion.li
         key={skill.name}
@@ -62,6 +53,10 @@ function SkillsAndTechSection({ data }: SkillsAndTechSectionProps) {
       </motion.li>
     );
   });
+
+  if (loading) return <Loading />;
+
+  if (error) return <Error error={error} />;
 
   return (
     <div className='py-5'>

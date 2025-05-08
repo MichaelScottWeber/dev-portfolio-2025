@@ -6,14 +6,12 @@ import ProjectSection from './ProjectSection';
 import SkillsAndTechSection from './SkillsAndTechSection';
 import AboutSection from './AboutSection';
 import Footer from './Footer';
-import PortfolioData from '../assets/data/portfolioData.json';
 import { AnimatePresence } from 'motion/react';
 import * as motion from 'motion/react-client';
-
-type View = 'projects' | 'skills' | 'about';
+import { ViewType } from '../types/portfolio';
 
 function MainContent() {
-  const [currentView, setCurrentView] = useState<View>('projects');
+  const [currentView, setCurrentView] = useState<ViewType>('projects');
 
   const renderContent = (view: string) => {
     if (view === 'projects') {
@@ -26,7 +24,7 @@ function MainContent() {
             exit={{ y: 0, opacity: 0 }}
             transition={{ duration: 0.15 }}
           >
-            <ProjectSection data={PortfolioData.projects} />
+            <ProjectSection />
           </motion.div>
         </AnimatePresence>
       );
@@ -40,7 +38,7 @@ function MainContent() {
             exit={{ y: 0, opacity: 0 }}
             transition={{ duration: 0.15 }}
           >
-            <SkillsAndTechSection data={PortfolioData.skills} />
+            <SkillsAndTechSection />
           </motion.div>
         </AnimatePresence>
       );
