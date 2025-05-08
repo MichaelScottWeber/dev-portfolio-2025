@@ -1,55 +1,17 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import TabButton from './TabButton';
 import ProjectSection from './ProjectSection';
 import SkillsAndTechSection from './SkillsAndTechSection';
 import AboutSection from './AboutSection';
 import Footer from './Footer';
-// import PortfolioData from '../assets/data/portfolioData.json';
 import { AnimatePresence } from 'motion/react';
 import * as motion from 'motion/react-client';
-// import { db } from '../firebase';
-// import { collection, getDocs, doc, getDoc } from 'firebase/firestore';
-
-type View = 'projects' | 'skills' | 'about';
+import { ViewType } from '../types/portfolio';
 
 function MainContent() {
-  const [currentView, setCurrentView] = useState<View>('projects');
-
-  // const [projects, setProjects] = useState([]);
-  // const [skills, setSkills] = useState({ skills: [], tags: [] });
-  // const [loading, setLoading] = useState(true);
-  // const [error, setError] = useState(null);
-
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       // Fetch Projects
-  //       const projectsCollection = collection(db, 'projects');
-  //       const projectSnapshot = await getDocs(projectsCollection);
-  //       const projectsList = projectSnapshot.docs.map((doc) => ({
-  //         id: doc.id,
-  //         ...doc.data(),
-  //       }));
-  //       setProjects(projectsList);
-
-  //       // Fetch Skills
-  //       const skillsDoc = await getDoc(doc(db, 'skills', 'skillsList'));
-  //       if (skillsDoc.exists()) {
-  //         setSkills(skillsDoc.data());
-  //       }
-
-  //       setLoading(false);
-  //     } catch (err) {
-  //       console.error('Error fetching data', err);
-  //       setLoading(false);
-  //       setError(err);
-  //     }
-  //   };
-
-  //   fetchData();
-  // }, []);
+  const [currentView, setCurrentView] = useState<ViewType>('projects');
 
   const renderContent = (view: string) => {
     if (view === 'projects') {
@@ -62,7 +24,6 @@ function MainContent() {
             exit={{ y: 0, opacity: 0 }}
             transition={{ duration: 0.15 }}
           >
-            {/* <ProjectSection data={PortfolioData.projects} /> */}
             <ProjectSection />
           </motion.div>
         </AnimatePresence>
@@ -77,7 +38,6 @@ function MainContent() {
             exit={{ y: 0, opacity: 0 }}
             transition={{ duration: 0.15 }}
           >
-            {/* <SkillsAndTechSection data={PortfolioData.skills} /> */}
             <SkillsAndTechSection />
           </motion.div>
         </AnimatePresence>

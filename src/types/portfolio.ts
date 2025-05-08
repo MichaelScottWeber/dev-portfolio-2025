@@ -19,3 +19,5 @@ export type SkillsDataType = {
   skills: SkillType[];
   tags: string[];
 };
+
+export type ViewType = 'projects' | 'skills' | 'about';
