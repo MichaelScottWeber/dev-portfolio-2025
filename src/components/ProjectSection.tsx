@@ -1,22 +1,18 @@
 import Project from './Project';
+import { useProjects } from '../hooks/useFirebase';
 
-type ProjectData = {
-  name: string;
-  img1: string;
-  img2: string;
-  color: string;
-  siteUrl: string;
-  sourceUrl: string;
-  desc: string;
-  tech: string[];
-};
+function ProjectSection() {
+  const { projects, loading, error } = useProjects();
 
-type ProjectSectionProps = {
-  data: ProjectData[];
-};
+  if (loading) {
+    return <div>loading...</div>;
+  }
 
-function ProjectSection({ data }: ProjectSectionProps) {
-  const renderProjectList = data.map((project) => {
+  if (error) {
+    return <div>error: {error}</div>;
+  }
+
+  const renderProjectList = projects?.map((project) => {
     return <Project key={project.name} data={project} />;
   });
 
