@@ -67,7 +67,9 @@ function MainContent() {
   return (
     <section className='w-full h-full md:p-5'>
       {projectsLoading || skillsLoading ? (
-        <Loading />
+        <div className='flex justify-center items-center h-full'>
+          <Loading />
+        </div>
       ) : projectsError || skillsError ? (
         <Error error={projectsError || skillsError} />
       ) : (
