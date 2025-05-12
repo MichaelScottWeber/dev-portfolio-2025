@@ -4,8 +4,8 @@ import { ProjectType, SkillsDataType } from '../types/portfolio';
 
 export const useProjects = () => {
   const [projects, setProjects] = useState<ProjectType[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<string | null>(null);
+  const [projectsLoading, setProjectsLoading] = useState<boolean>(true);
+  const [projectsError, setprojectsError] = useState<string | null>(null);
 
   useEffect(() => {
     const getProjects = async () => {
@@ -14,18 +14,18 @@ export const useProjects = () => {
           'projects'
         );
         setProjects(projectsData);
-        setLoading(false);
+        setProjectsLoading(false);
       } catch (err) {
         console.error('Error fetching projects:', err);
-        setError(err instanceof Error ? err.message : 'Unknown error');
-        setLoading(false);
+        setprojectsError(err instanceof Error ? err.message : 'Unknown error');
+        setProjectsLoading(false);
       }
     };
 
     getProjects();
   }, []);
 
-  return { projects, loading, error };
+  return { projects, projectsLoading, projectsError };
 };
 
 export const useSkills = () => {
@@ -33,8 +33,8 @@ export const useSkills = () => {
     skills: [],
     tags: [],
   });
-  const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<string | null>(null);
+  const [skillsLoading, setskillsLoading] = useState<boolean>(true);
+  const [skillsError, setSkillsError] = useState<string | null>(null);
 
   useEffect(() => {
     const getSkills = async () => {
@@ -44,16 +44,16 @@ export const useSkills = () => {
           'skillsList'
         );
         setSkills(skillsData || { skills: [], tags: [] });
-        setLoading(false);
+        setskillsLoading(false);
       } catch (err) {
         console.error('Error fetching skills:', err);
-        setError(err instanceof Error ? err.message : 'Unknown error');
-        setLoading(false);
+        setSkillsError(err instanceof Error ? err.message : 'Unknown error');
+        setskillsLoading(false);
       }
     };
 
     getSkills();
   }, []);
 
-  return { skills, loading, error };
+  return { skills, skillsLoading, skillsError };
 };

@@ -6,21 +6,21 @@ import Layout from './icons/Layout';
 import PenTool from './icons/PenTool';
 import Share from './icons/Share';
 import BookOpen from './icons/BookOpen';
-import Loading from './Loading';
-import Error from './Error';
 import { AnimatePresence, motion } from 'motion/react';
-import { SkillType } from '../types/portfolio';
-import { useSkills } from '../hooks/useFirebase';
+import { SkillType, SkillsDataType } from '../types/portfolio';
 
-function SkillsAndTechSection() {
+type SkillsAndTechSectionProps = {
+  data: SkillsDataType;
+};
+
+function SkillsAndTechSection({ data }: SkillsAndTechSectionProps) {
   const [selectedTag, setSelectedTag] = useState('');
-  const { skills, loading, error } = useSkills();
 
   const handleSearchPillClick = (tag: string) => {
     setSelectedTag(tag);
   };
 
-  const renderSearchTermList = skills?.tags.map((tag) => {
+  const renderSearchTermList = data?.tags.map((tag) => {
     return (
       <li key={tag}>
         <SearchPill
@@ -40,7 +40,7 @@ function SkillsAndTechSection() {
     }
   };
 
-  const renderSkillsList = filterSkills(skills.skills).map((skill) => {
+  const renderSkillsList = filterSkills(data.skills).map((skill) => {
     return (
       <motion.li
         key={skill.name}
@@ -53,10 +53,6 @@ function SkillsAndTechSection() {
       </motion.li>
     );
   });
-
-  if (loading) return <Loading />;
-
-  if (error) return <Error error={error} />;
 
   return (
     <div className='py-5'>
