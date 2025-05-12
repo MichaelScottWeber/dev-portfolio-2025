@@ -1,5 +1,5 @@
 type ErrorProps = {
-  error: string;
+  error: string | null;
 };
 
 function Error({ error }: ErrorProps) {

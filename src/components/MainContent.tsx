@@ -8,17 +8,15 @@ import AboutSection from './AboutSection';
 import Footer from './Footer';
 import { AnimatePresence } from 'motion/react';
 import * as motion from 'motion/react-client';
-import { ViewType, SkillType } from '../types/portfolio';
+import { ViewType } from '../types/portfolio';
 import { useSkills, useProjects } from '../hooks/useFirebase';
 import Loading from './Loading';
 import Error from './Error';
 
 function MainContent() {
   const [currentView, setCurrentView] = useState<ViewType>('projects');
-  // TODO - Change hook to load in ALL data in one call
   const { projects, projectsLoading, projectsError } = useProjects();
   const { skills, skillsLoading, skillsError } = useSkills();
-  // const { projects, skills, loading, error } = useFirebase();
 
   const renderContent = (view: string) => {
     if (view === 'projects') {
@@ -31,7 +29,6 @@ function MainContent() {
             exit={{ y: 0, opacity: 0 }}
             transition={{ duration: 0.15 }}
           >
-            {/* TODO - add proptypes */}
             <ProjectSection data={projects} />
           </motion.div>
         </AnimatePresence>
@@ -46,7 +43,6 @@ function MainContent() {
             exit={{ y: 0, opacity: 0 }}
             transition={{ duration: 0.15 }}
           >
-            {/* TODO - add proptypes */}
             <SkillsAndTechSection data={skills} />
           </motion.div>
         </AnimatePresence>
@@ -73,7 +69,7 @@ function MainContent() {
       {projectsLoading || skillsLoading ? (
         <Loading />
       ) : projectsError || skillsError ? (
-        <Error error={error} />
+        <Error error={projectsError || skillsError} />
       ) : (
         <>
           <div className='border-b border-gray-300 dark:border-gray-800 flex items-center justify-start'>
