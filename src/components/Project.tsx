@@ -38,7 +38,7 @@ function Project({ data }: ProjectProps) {
       <div
         onClick={projectClickHandler}
         style={{ backgroundColor: data.color }}
-        className='rounded cursor-pointer overflow-hidden max-w-full'
+        className='rounded cursor-pointer overflow-hidden max-w-full border-2 border-transparent hover:border-secondary-500'
       >
         <motion.div
           animate={showMoreInfo ? 'info' : 'image'}
