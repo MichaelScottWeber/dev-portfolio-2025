@@ -18,6 +18,7 @@ function MainContent() {
   // TODO - Change hook to load in ALL data in one call
   const { projects, projectsLoading, projectsError } = useProjects();
   const { skills, skillsLoading, skillsError } = useSkills();
+  // const { projects, skills, loading, error } = useFirebase();
 
   const renderContent = (view: string) => {
     if (view === 'projects') {
@@ -72,7 +73,7 @@ function MainContent() {
       {projectsLoading || skillsLoading ? (
         <Loading />
       ) : projectsError || skillsError ? (
-        <Error error={projectsError || skillsError} />
+        <Error error={error} />
       ) : (
         <>
           <div className='border-b border-gray-300 dark:border-gray-800 flex items-center justify-start'>
