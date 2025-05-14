@@ -38,7 +38,7 @@ function Project({ data }: ProjectProps) {
       <div
         onClick={projectClickHandler}
         style={{ backgroundColor: data.color }}
-        className='rounded cursor-pointer overflow-hidden max-w-full border-2 border-transparent hover:border-secondary-500'
+        className='rounded cursor-pointer overflow-hidden max-w-full outline-2 outline-transparent hover:outline-secondary-500'
       >
         <motion.div
           animate={showMoreInfo ? 'info' : 'image'}
@@ -48,6 +48,7 @@ function Project({ data }: ProjectProps) {
         >
           <div className='w-80 xs:w-96'>
             <img
+              // height='240'
               className='max-w-full'
               src={data.img1}
               alt={`screenshots of ${data.name}`}
@@ -55,6 +56,7 @@ function Project({ data }: ProjectProps) {
           </div>
           <div className='relative w-80 xs:w-96'>
             <img
+              // height='240'
               className='max-w-full'
               src={data.img2}
               alt={`screenshots of ${data.name}`}
