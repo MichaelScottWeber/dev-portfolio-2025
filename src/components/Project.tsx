@@ -46,7 +46,7 @@ function Project({ data }: ProjectProps) {
           variants={motionVariants}
           className='flex w-[640px] xs:w-[768px]'
         >
-          <div className='w-80 xs:w-96'>
+          <div className='w-80 xs:w-96 h-200px xs:h-244px'>
             <img
               // height='240'
               className='max-w-full'
